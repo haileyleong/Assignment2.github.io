@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles.css">
+    <title>Assignment 2</title>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="membership.html">Membership</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+            </a>
+      </div>
+      <!--need add css for navi bar on css.styles, for normal nav bar and repsonsive nav bar-->
+      <img src="logo.jpg" alt="Gravity" width="270" height="80">
+
+ <h2> Gallery</h2>
+        
+        <div class="slideshow-container">
+        
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 6</div>
+          <img src="gallery1.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 6</div>
+          <img src="gallery2.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 6</div>
+          <img src="gallery3.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 6</div>
+          <img src="gallery4.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 6</div>
+          <img src="gallery5.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">6 / 6</div>
+          <img src="gallery6.jpg" style="width:100%">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+          <span class="dot" onclick="currentSlide(4)"></span> 
+          <span class="dot" onclick="currentSlide(5)"></span> 
+          <span class="dot" onclick="currentSlide(6)"></span> 
+        </div>
+        
+        <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+        
+    
+<!-- edit css w3schools-->
+
+ <h2>Latest News</h2>  
+ <table>
+    <tr>
+      <td><a href="https://blog.gravityclub.com/tcm-obesity"><img src="news1.jpg" width="400" height="200"></a><br><b>TCM and Obesity</b><br><br>Not only does obesity affect one's appearance, more importantly, it also increases the risk of developing certain conditions such as diabetes, hyperlipidemia, hypertension, arteriosclerosis (heart disease), fatty liver, infertility, etc. A TCM treatment does not deal only with the excess fats. It also treats the underlying condition of the body that might have led to the weight gain.</td>
+      <td><a href="https://blog.gravityclub.com/boosting-immunity-with-tcm"><img src="news2.jpg" width="400" height="200"></a><br><b>Boosting Immunity with TCM</b><br><br>As long as our body's immunity is strong enough, we should be shielded from any pathogens that would otherwise cause us to become ill. In this article, let's find out how we can boost our immunity with TCM.</td>
+      <td><a href="https://blog.gravityclub.com/the-importance-of-sleep-and-consequences-of-inadequate-sleep"><img src="news3.jpg" width="400" height="200"></a><br><b>The Importance of Sleep and Consequences of Inadequate Sleep</b><br><br>In modern society today, most people do not get enough rest. We can stay up all night to work, study, or have fun and neglect sleep. However, most people do not know that a lack of rest, especially on a regular basis; can have many short-term and long-term consequences/effects.</td>
+    </tr>
+  </table>
+  <!--how to better align the pictures? center one abit off-->
+  <p> For more news, click <a href="https://blog.gravityclub.com/">here</a>.</p>
+
+<h3>Contact Us</h3>
+<p>
+    <b>Address</b><br>
+    138 Market St, #38-01, <br>
+    Singapore 048946 <br>
+    <a href="https://www.google.com/maps?daddr=%E2%80%9DCapitaGreen%E2%80%9D"> Directions</a>
+    <br><br>
+    <b>Contact Number</b><br>
+    +65 6653 9988
+    <br><br>   
+    <b>Operating Hours</b><br>
+    Monday-Friday: 6:00AM - 10:30PM<br>
+    Saturday: 7:00AM - 9:00PM<br>
+    Sunday & Public Holidays: CLOSED <br>
+</p>
+  
+ <!-- <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+  <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
+  <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p> -->
+ 
+  <!--<p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p> 
+-->
+</div>
+
+</body>
+</html>

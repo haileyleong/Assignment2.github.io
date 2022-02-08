@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles.css">
+    <title>Assignment 2</title>
+</head>
+<body style="background-color:darkgrey">
+  <div class="topnav">
+    <a class="active" href="index.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="facilities.html">Facilities</a>
+    <a href="membership.html">Become a Member Now!</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+  </div>
+<!-- why doesn't the block change to about us?-->
+
+
+<!--<style>
+  a:link {
+    color: rgb(255, 0, 0);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: rgb(255, 0, 43);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  </style>-->
+
+<img src="logo.jpg" alt="Gravity" width="270" height="80">
+
+<div style="margin-left:15%; margin-right:15%; padding:1px 16px;height:1000px; color:black; text-align:center;">
+  <!-- <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3> -->
+  <!--<p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p> -->
+  <style>
+    * {box-sizing: border-box}
+    .mySlides1, .mySlides2 {display: none}
+    img {vertical-align: middle;}
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a grey background color */
+    .prev:hover, .next:hover {
+      background-color: #f1f1f1;
+      color: black;
+    }
+    </style>
+<h2>Gym</h2>
+<div class="slideshow-container">
+  <div class="mySlides1">
+    <img src="facil2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <img src="facil3.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+<p>Our gym is designed to provide you with options to work out the way you want. Our innovative fitness offerings include cutting-edge cardio, free weights, a 1-on-1 boxing area and strength equipment, plus functional training zones as you tower over spectacular, elevated views of Marina Bay and the CBD. </p>
+<br>
+<h2>Fitness 3D Proscanner</h2>
+<img src="scanner.jpg" alt="Fitness 3D Proscanner" style="width:100%" class="center">
+<p>The ProScanner captures a 360 degrees 3D image of you and extracts measurements of your health. This will offer an objective, analytical view of your physical wellness levels.</p>
+<br>
+<h2>Changing Rooms</h2>
+<div class="slideshow-container">
+  <div class="mySlides2">
+    <img src="cr1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides2">
+    <img src="cr2.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+</div>
+<p>
+Our luxurious changing rooms provide a relaxing transition from the teeming city streets below, into Gravity's world of considered, focused perfection. Salon-standard hair care products, ironing and pressing services, individual USB ports that keep your devices fully charged, rain showers, private label Ayurvedic beauty products and a herbal infused steam room to complete the experience.
+</p>
+<br>
+<h2>Programmes</h2>
+<div class="container">
+  <img src="p1.jpg" alt="Personal Fitness" style="width:100%;">
+  <div class="content">
+    <h1>Personal Coaching</h1>
+    <p>Our Certified Fitness Coaches are the backbone of our health and fitness services. Combining state-of-the-art facilities and equipment with customised advanced training regimes, we carefully consider each individual's body, purpose and effectiveness for a highly personalised programme to help you stay on top of your game.</p>
+  </div>
+</div>
+<br>
+<div class="container">
+  <img src="p2.jpg" alt="Group Fitness" style="width:100%;">
+  <div class="content">
+    <h1>Group Fitness</h1>
+    <p>Whether you want to increase your physical performance with high intensity activity and stay at the top of your game, or revive and recharge tired muscles, we have the workout for you. All our group classes are included as part of your membership and are designed to enhance, condition and restore your health and fitness.</p>
+    <p><a href="https://www.gravityclub.com/en/groupfitness-info#groupfitness" style="color: red">View Class Info</a></p>
+    <p><a href="https://www.gravityclub.com/en/timetable#gx" style="color: red">View Class Schedule</a></p>
+    <br>
+  </div>
+</div>
+
+<script>
+  var slideIndex = [1,1];
+  var slideId = ["mySlides1", "mySlides2"]
+  showSlides(1, 0);
+  showSlides(1, 1);
+  
+  function plusSlides(n, no) {
+    showSlides(slideIndex[no] += n, no);
+  }
+  
+  function showSlides(n, no) {
+    var i;
+    var x = document.getElementsByClassName(slideId[no]);
+    if (n > x.length) {slideIndex[no] = 1}    
+    if (n < 1) {slideIndex[no] = x.length}
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    x[slideIndex[no]-1].style.display = "block";  
+  }
+  </script>
+
+<!-- insert map? -->
+
+  <!--<p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p> -->
+ <!-- <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+-->
+</div>
+
+</body>
+</html>
